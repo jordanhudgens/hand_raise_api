@@ -1,4 +1,12 @@
 class HandRaise < ApplicationRecord
+  enum status: {
+    pending: 0,
+    in_progress: 1,
+    resolved: 2,
+    unresolved: 3,
+    archived: 5
+  }
+
   validates_presence_of :question, :student_email, :student_name
 
   after_initialize :set_defaults
