@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question: MyString
+  body: MyText
+  student_email: MyString
+  student_name: MyString
+  guide_title: MyString
+  guide_id: 1
+  resolution: MyText
+  ta_name: MyString
+  ta_email: MyString
+  status: 1
+
+two:
+  question: MyString
+  body: MyText
+  student_email: MyString
+  student_name: MyString
+  guide_title: MyString
+  guide_id: 1
+  resolution: MyText
+  ta_name: MyString
+  ta_email: MyString
+  status: 1
