@@ -19,4 +19,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
+gem 'sidekiq', '~> 5.0'
