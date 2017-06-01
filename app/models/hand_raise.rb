@@ -3,8 +3,7 @@ class HandRaise < ApplicationRecord
     pending: 0,
     in_progress: 1,
     resolved: 2,
-    unresolved: 3,
-    archived: 5
+    unresolved: 3
   }
 
   validates_presence_of :question, :student_email, :student_name
