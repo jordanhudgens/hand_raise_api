@@ -21,4 +21,5 @@ group :development do
 end
 
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
+gem 'redis', '~> 3.3', '>= 3.3.3'
 gem 'sidekiq', '~> 5.0'
