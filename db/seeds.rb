@@ -5,7 +5,8 @@
     student_email: Faker::Internet.email,
     student_name: Faker::StarWars.character,
     guide_title: (Faker::StarWars.vehicle + Faker::StarWars.specie),
-    guide_id: rand(100)
+    guide_id: rand(100),
+    status: (1..3).to_a.sample
   )
 
   puts hr.student_name
