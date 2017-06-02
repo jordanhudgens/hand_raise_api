@@ -1,5 +1,6 @@
 class HandRaisesController < ApplicationController
   before_action :set_hand_raise, only: [:show, :update, :destroy]
+  before_action :authenticate_api_request
 
   def index
     @hand_raises = HandRaise.where("status = ?", params[:filter])
@@ -40,5 +41,12 @@ class HandRaisesController < ApplicationController
 
     def hand_raise_params
       params.require(:hand_raise).permit(:question, :body, :student_email, :student_name, :guide_title, :guide_id, :resolution, :ta_name, :ta_email, :status)
+    end
+
+    def authenticate_api_request
+      authenticate_or_request_with_http_basic do |source_app, api_key|
+        api_client = ApiClient.find_by_source_app(source_app)
+        api_client && api_client.api_key == api_key
+      end
     end
 end
