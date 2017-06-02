@@ -2,7 +2,7 @@ class HandRaisesController < ApplicationController
   before_action :set_hand_raise, only: [:show, :update, :destroy]
 
   def index
-    @hand_raises = HandRaise.all
+    @hand_raises = HandRaise.where("status = ?", "#{params[:filter]}")
 
     render json: @hand_raises
   end
