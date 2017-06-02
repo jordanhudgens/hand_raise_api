@@ -1,7 +1,7 @@
 1000.times do |i|
   hr = HandRaise.create!(
     question: Faker::StarWars.quote,
-    body: Faker::StarWars.wookie_sentence,
+    body: Faker::HitchhikersGuideToTheGalaxy.quote,
     student_email: Faker::Internet.email,
     student_name: Faker::StarWars.character,
     guide_title: (Faker::StarWars.vehicle + Faker::StarWars.specie),
