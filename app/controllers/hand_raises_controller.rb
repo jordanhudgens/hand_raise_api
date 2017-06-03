@@ -3,7 +3,7 @@ class HandRaisesController < ApplicationController
   before_action :authenticate_api_request
 
   def index
-    @hand_raises = HandRaise.where("status = ?", params[:filter])
+    @hand_raises = HandRaise.where("status = ?", params[:filter]).limit(20)
 
     render json: @hand_raises
   end
