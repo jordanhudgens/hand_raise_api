@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170602231519) do
+ActiveRecord::Schema.define(version: 20170603215227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20170602231519) do
     t.string "student_email"
     t.string "student_name"
     t.string "guide_title"
-    t.integer "guide_id"
     t.text "resolution"
     t.string "ta_name"
     t.string "ta_email"
@@ -37,6 +36,8 @@ ActiveRecord::Schema.define(version: 20170602231519) do
     t.datetime "updated_at", null: false
     t.string "ta_slack_username"
     t.string "student_slack_username"
+    t.integer "hand_raise_id"
+    t.string "guide_url"
   end
 
 end

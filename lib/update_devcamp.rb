@@ -18,7 +18,7 @@ module UpdateDevcamp
     }
 
     HTTParty.patch(
-      "#{ENV.fetch('DEVCAMP_HAND_RAISE_API')}/#{hand_raise.guide_id}",
+      "#{ENV.fetch('DEVCAMP_HAND_RAISE_API')}/#{hand_raise.hand_raise_id}",
       options
     )
   end
