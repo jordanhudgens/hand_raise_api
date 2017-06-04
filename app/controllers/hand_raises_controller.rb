@@ -40,7 +40,20 @@ class HandRaisesController < ApplicationController
     end
 
     def hand_raise_params
-      params.require(:hand_raise).permit(:question, :body, :student_email, :student_name, :guide_title, :guide_id, :resolution, :ta_name, :ta_email, :status)
+      params.require(:hand_raise).permit(
+        :hand_raise_id,
+        :question,
+        :body,
+        :student_email,
+        :student_name,
+        :guide_title,
+        :guide_url,
+        :student_slack_username,
+        :resolution,
+        :ta_name,
+        :ta_email,
+        :status
+      )
     end
 
     def authenticate_api_request
